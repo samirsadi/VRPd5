@@ -1,0 +1,298 @@
+<html>
+  <head>
+    <script src="https://aframe.io/releases/1.7.0/aframe.min.js"></script>
+  </head>
+  <body>
+    <a-scene>
+<!-- Challenge
+    Add an asset manager that preloads images for the ids below which are being referenced throughout the VR world. 
+IDs: spiderskin, rock, spidereye, cave, and bk          
+-->
+
+
+      <a-sky src="#bk" repeat="6 6"></a-sky>
+      <a-plane src="#cave" repeat="6 6" position="0 0 -2" width="150" height="150" rotation="-90 0 0"></a-plane>
+      <!-- Spider -->
+      <a-entity rotation="0 0 0" position="0 0.5 -2" scale="0.4 0.4 0.4">
+        <a-sphere src="#spidereye" position="0.5 0.25 0.85" radius="0.175"></a-sphere>
+        <a-sphere src="#spidereye" position="0.2 0.25 0.85" radius="0.25"></a-sphere>
+        <a-sphere src="#spidereye" position="-0.2 0.25 0.85" radius="0.25"></a-sphere>
+        <a-sphere src="#spidereye" position="-0.5 0.25 0.85" radius="0.175"></a-sphere>
+        <a-entity position="0 0 0">
+          <a-sphere src="#spiderskin" position="0 0 0"></a-sphere>
+          <a-cylinder src="#spiderskin" position="-1 0.5 0.25" radius="0.25" height="2" rotation="0 0 45"></a-cylinder>
+          <a-cylinder src="#spiderskin" position="-2.3 0.3 0.25" radius="0.25" height="2.5" rotation="0 0 -45"></a-cylinder>
+
+          <a-cylinder src="#spiderskin" position="1 0.5 0.25" radius="0.25" height="2" rotation="0 0 -45"></a-cylinder>
+          <a-cylinder src="#spiderskin" position="2.3 0.3 0.25" radius="0.25" height="2.5" rotation="0 0 45"></a-cylinder>
+        </a-entity>
+        <a-entity position="0 0 -1.05">
+          <a-sphere src="#spiderskin" position="0 0 0"></a-sphere>
+          <a-cylinder src="#spiderskin" position="-1 0.5 0.25" radius="0.25" height="2" rotation="0 0 45"></a-cylinder>
+          <a-cylinder src="#spiderskin" position="-2.3 0.3 0.25" radius="0.25" height="2.5" rotation="0 0 -45"></a-cylinder>
+
+          <a-cylinder src="#spiderskin" position="1 0.5 0.25" radius="0.25" height="2" rotation="0 0 -45"></a-cylinder>
+          <a-cylinder src="#spiderskin" position="2.3 0.3 0.25" radius="0.25" height="2.5" rotation="0 0 45"></a-cylinder>
+        </a-entity>
+        <a-entity position="0 0 -2.1">
+          <a-sphere src="#spiderskin" position="0 0 0"></a-sphere>
+          <a-cylinder src="#spiderskin" position="-1 0.5 0.25" radius="0.25" height="2" rotation="0 0 45"></a-cylinder>
+          <a-cylinder src="#spiderskin" position="-2.3 0.3 0.25" radius="0.25" height="2.5" rotation="0 0 -45"></a-cylinder>
+
+          <a-cylinder src="#spiderskin" position="1 0.5 0.25" radius="0.25" height="2" rotation="0 0 -45"></a-cylinder>
+          <a-cylinder src="#spiderskin" position="2.3 0.3 0.25" radius="0.25" height="2.5" rotation="0 0 45"></a-cylinder>
+        </a-entity>
+      </a-entity>
+
+      <!-- Spider -->
+      <a-entity rotation="0 0 0" position="-10 1 -15" scale="1 1 1">
+        <a-sphere src="#spidereye" position="0.5 0.25 0.85" radius="0.175"></a-sphere>
+        <a-sphere src="#spidereye" position="0.2 0.25 0.85" radius="0.25"></a-sphere>
+        <a-sphere src="#spidereye" position="-0.2 0.25 0.85" radius="0.25"></a-sphere>
+        <a-sphere src="#spidereye" position="-0.5 0.25 0.85" radius="0.175"></a-sphere>
+        <a-entity position="0 0 0">
+          <a-sphere src="#spiderskin" position="0 0 0"></a-sphere>
+          <a-cylinder src="#spiderskin" position="-1 0.5 0.25" radius="0.25" height="2" rotation="0 0 45"></a-cylinder>
+          <a-cylinder src="#spiderskin" position="-2.3 0.3 0.25" radius="0.25" height="2.5" rotation="0 0 -45"></a-cylinder>
+
+          <a-cylinder src="#spiderskin" position="1 0.5 0.25" radius="0.25" height="2" rotation="0 0 -45"></a-cylinder>
+          <a-cylinder src="#spiderskin" position="2.3 0.3 0.25" radius="0.25" height="2.5" rotation="0 0 45"></a-cylinder>
+        </a-entity>
+        <a-entity position="0 0 -1.05">
+          <a-sphere src="#spiderskin" position="0 0 0"></a-sphere>
+          <a-cylinder src="#spiderskin" position="-1 0.5 0.25" radius="0.25" height="2" rotation="0 0 45"></a-cylinder>
+          <a-cylinder src="#spiderskin" position="-2.3 0.3 0.25" radius="0.25" height="2.5" rotation="0 0 -45"></a-cylinder>
+
+          <a-cylinder src="#spiderskin" position="1 0.5 0.25" radius="0.25" height="2" rotation="0 0 -45"></a-cylinder>
+          <a-cylinder src="#spiderskin" position="2.3 0.3 0.25" radius="0.25" height="2.5" rotation="0 0 45"></a-cylinder>
+        </a-entity>
+        <a-entity position="0 0 -2.1">
+          <a-sphere src="#spiderskin" position="0 0 0"></a-sphere>
+          <a-cylinder src="#spiderskin" position="-1 0.5 0.25" radius="0.25" height="2" rotation="0 0 45"></a-cylinder>
+          <a-cylinder src="#spiderskin" position="-2.3 0.3 0.25" radius="0.25" height="2.5" rotation="0 0 -45"></a-cylinder>
+
+          <a-cylinder src="#spiderskin" position="1 0.5 0.25" radius="0.25" height="2" rotation="0 0 -45"></a-cylinder>
+          <a-cylinder src="#spiderskin" position="2.3 0.3 0.25" radius="0.25" height="2.5" rotation="0 0 45"></a-cylinder>
+        </a-entity>
+      </a-entity>
+
+
+      <!-- Spider -->
+      <a-entity rotation="0 0 0" position="10 0.5 -15" scale="0.4 0.4 0.4">
+        <a-sphere src="#spidereye" position="0.5 0.25 0.85" radius="0.175"></a-sphere>
+        <a-sphere src="#spidereye" position="0.2 0.25 0.85" radius="0.25"></a-sphere>
+        <a-sphere src="#spidereye" position="-0.2 0.25 0.85" radius="0.25"></a-sphere>
+        <a-sphere src="#spidereye" position="-0.5 0.25 0.85" radius="0.175"></a-sphere>
+        <a-entity position="0 0 0">
+          <a-sphere src="#spiderskin" position="0 0 0"></a-sphere>
+          <a-cylinder src="#spiderskin" position="-1 0.5 0.25" radius="0.25" height="2" rotation="0 0 45"></a-cylinder>
+          <a-cylinder src="#spiderskin" position="-2.3 0.3 0.25" radius="0.25" height="2.5" rotation="0 0 -45"></a-cylinder>
+
+          <a-cylinder src="#spiderskin" position="1 0.5 0.25" radius="0.25" height="2" rotation="0 0 -45"></a-cylinder>
+          <a-cylinder src="#spiderskin" position="2.3 0.3 0.25" radius="0.25" height="2.5" rotation="0 0 45"></a-cylinder>
+        </a-entity>
+        <a-entity position="0 0 -1.05">
+          <a-sphere src="#spiderskin" position="0 0 0"></a-sphere>
+          <a-cylinder src="#spiderskin" position="-1 0.5 0.25" radius="0.25" height="2" rotation="0 0 45"></a-cylinder>
+          <a-cylinder src="#spiderskin" position="-2.3 0.3 0.25" radius="0.25" height="2.5" rotation="0 0 -45"></a-cylinder>
+
+          <a-cylinder src="#spiderskin" position="1 0.5 0.25" radius="0.25" height="2" rotation="0 0 -45"></a-cylinder>
+          <a-cylinder src="#spiderskin" position="2.3 0.3 0.25" radius="0.25" height="2.5" rotation="0 0 45"></a-cylinder>
+        </a-entity>
+        <a-entity position="0 0 -2.1">
+          <a-sphere src="#spiderskin" position="0 0 0"></a-sphere>
+          <a-cylinder src="#spiderskin" position="-1 0.5 0.25" radius="0.25" height="2" rotation="0 0 45"></a-cylinder>
+          <a-cylinder src="#spiderskin" position="-2.3 0.3 0.25" radius="0.25" height="2.5" rotation="0 0 -45"></a-cylinder>
+
+          <a-cylinder src="#spiderskin" position="1 0.5 0.25" radius="0.25" height="2" rotation="0 0 -45"></a-cylinder>
+          <a-cylinder src="#spiderskin" position="2.3 0.3 0.25" radius="0.25" height="2.5" rotation="0 0 45"></a-cylinder>
+        </a-entity>
+      </a-entity>
+
+      <!-- Spider -->
+      <a-entity rotation="0 90 0" position="-15 0.5 -5" scale="0.4 0.4 0.4">
+        <a-sphere src="#spidereye" position="0.5 0.25 0.85" radius="0.175"></a-sphere>
+        <a-sphere src="#spidereye" position="0.2 0.25 0.85" radius="0.25"></a-sphere>
+        <a-sphere src="#spidereye" position="-0.2 0.25 0.85" radius="0.25"></a-sphere>
+        <a-sphere src="#spidereye" position="-0.5 0.25 0.85" radius="0.175"></a-sphere>
+        <a-entity position="0 0 0">
+          <a-sphere src="#spiderskin" position="0 0 0"></a-sphere>
+          <a-cylinder src="#spiderskin" position="-1 0.5 0.25" radius="0.25" height="2" rotation="0 0 45"></a-cylinder>
+          <a-cylinder src="#spiderskin" position="-2.3 0.3 0.25" radius="0.25" height="2.5" rotation="0 0 -45"></a-cylinder>
+
+          <a-cylinder src="#spiderskin" position="1 0.5 0.25" radius="0.25" height="2" rotation="0 0 -45"></a-cylinder>
+          <a-cylinder src="#spiderskin" position="2.3 0.3 0.25" radius="0.25" height="2.5" rotation="0 0 45"></a-cylinder>
+        </a-entity>
+        <a-entity position="0 0 -1.05">
+          <a-sphere src="#spiderskin" position="0 0 0"></a-sphere>
+          <a-cylinder src="#spiderskin" position="-1 0.5 0.25" radius="0.25" height="2" rotation="0 0 45"></a-cylinder>
+          <a-cylinder src="#spiderskin" position="-2.3 0.3 0.25" radius="0.25" height="2.5" rotation="0 0 -45"></a-cylinder>
+
+          <a-cylinder src="#spiderskin" position="1 0.5 0.25" radius="0.25" height="2" rotation="0 0 -45"></a-cylinder>
+          <a-cylinder src="#spiderskin" position="2.3 0.3 0.25" radius="0.25" height="2.5" rotation="0 0 45"></a-cylinder>
+        </a-entity>
+        <a-entity position="0 0 -2.1">
+          <a-sphere src="#spiderskin" position="0 0 0"></a-sphere>
+          <a-cylinder src="#spiderskin" position="-1 0.5 0.25" radius="0.25" height="2" rotation="0 0 45"></a-cylinder>
+          <a-cylinder src="#spiderskin" position="-2.3 0.3 0.25" radius="0.25" height="2.5" rotation="0 0 -45"></a-cylinder>
+
+          <a-cylinder src="#spiderskin" position="1 0.5 0.25" radius="0.25" height="2" rotation="0 0 -45"></a-cylinder>
+          <a-cylinder src="#spiderskin" position="2.3 0.3 0.25" radius="0.25" height="2.5" rotation="0 0 45"></a-cylinder>
+        </a-entity>
+      </a-entity>
+
+      <!-- Spider -->
+      <a-entity rotation="0 180 0" position="-5 0.5 15" scale="0.4 0.4 0.4">
+        <a-sphere src="#spidereye" position="0.5 0.25 0.85" radius="0.175"></a-sphere>
+        <a-sphere src="#spidereye" position="0.2 0.25 0.85" radius="0.25"></a-sphere>
+        <a-sphere src="#spidereye" position="-0.2 0.25 0.85" radius="0.25"></a-sphere>
+        <a-sphere src="#spidereye" position="-0.5 0.25 0.85" radius="0.175"></a-sphere>
+        <a-entity position="0 0 0">
+          <a-sphere src="#spiderskin" position="0 0 0"></a-sphere>
+          <a-cylinder src="#spiderskin" position="-1 0.5 0.25" radius="0.25" height="2" rotation="0 0 45"></a-cylinder>
+          <a-cylinder src="#spiderskin" position="-2.3 0.3 0.25" radius="0.25" height="2.5" rotation="0 0 -45"></a-cylinder>
+
+          <a-cylinder src="#spiderskin" position="1 0.5 0.25" radius="0.25" height="2" rotation="0 0 -45"></a-cylinder>
+          <a-cylinder src="#spiderskin" position="2.3 0.3 0.25" radius="0.25" height="2.5" rotation="0 0 45"></a-cylinder>
+        </a-entity>
+        <a-entity position="0 0 -1.05">
+          <a-sphere src="#spiderskin" position="0 0 0"></a-sphere>
+          <a-cylinder src="#spiderskin" position="-1 0.5 0.25" radius="0.25" height="2" rotation="0 0 45"></a-cylinder>
+          <a-cylinder src="#spiderskin" position="-2.3 0.3 0.25" radius="0.25" height="2.5" rotation="0 0 -45"></a-cylinder>
+
+          <a-cylinder src="#spiderskin" position="1 0.5 0.25" radius="0.25" height="2" rotation="0 0 -45"></a-cylinder>
+          <a-cylinder src="#spiderskin" position="2.3 0.3 0.25" radius="0.25" height="2.5" rotation="0 0 45"></a-cylinder>
+        </a-entity>
+        <a-entity position="0 0 -2.1">
+          <a-sphere src="#spiderskin" position="0 0 0"></a-sphere>
+          <a-cylinder src="#spiderskin" position="-1 0.5 0.25" radius="0.25" height="2" rotation="0 0 45"></a-cylinder>
+          <a-cylinder src="#spiderskin" position="-2.3 0.3 0.25" radius="0.25" height="2.5" rotation="0 0 -45"></a-cylinder>
+
+          <a-cylinder src="#spiderskin" position="1 0.5 0.25" radius="0.25" height="2" rotation="0 0 -45"></a-cylinder>
+          <a-cylinder src="#spiderskin" position="2.3 0.3 0.25" radius="0.25" height="2.5" rotation="0 0 45"></a-cylinder>
+        </a-entity>
+      </a-entity>
+
+      <!-- Spider -->
+      <a-entity rotation="45 45 0" position="-4 1.5 -4" scale="0.4 0.4 0.4">
+        <a-sphere src="#spidereye" position="0.5 0.25 0.85" radius="0.175"></a-sphere>
+        <a-sphere src="#spidereye" position="0.2 0.25 0.85" radius="0.25"></a-sphere>
+        <a-sphere src="#spidereye" position="-0.2 0.25 0.85" radius="0.25"></a-sphere>
+        <a-sphere src="#spidereye" position="-0.5 0.25 0.85" radius="0.175"></a-sphere>
+        <a-entity position="0 0 0">
+          <a-sphere src="#spiderskin" position="0 0 0"></a-sphere>
+          <a-cylinder src="#spiderskin" position="-1 0.5 0.25" radius="0.25" height="2" rotation="0 0 45"></a-cylinder>
+          <a-cylinder src="#spiderskin" position="-2.3 0.3 0.25" radius="0.25" height="2.5" rotation="0 0 -45"></a-cylinder>
+
+          <a-cylinder src="#spiderskin" position="1 0.5 0.25" radius="0.25" height="2" rotation="0 0 -45"></a-cylinder>
+          <a-cylinder src="#spiderskin" position="2.3 0.3 0.25" radius="0.25" height="2.5" rotation="0 0 45"></a-cylinder>
+        </a-entity>
+        <a-entity position="0 0 -1.05">
+          <a-sphere src="#spiderskin" position="0 0 0"></a-sphere>
+          <a-cylinder src="#spiderskin" position="-1 0.5 0.25" radius="0.25" height="2" rotation="0 0 45"></a-cylinder>
+          <a-cylinder src="#spiderskin" position="-2.3 0.3 0.25" radius="0.25" height="2.5" rotation="0 0 -45"></a-cylinder>
+
+          <a-cylinder src="#spiderskin" position="1 0.5 0.25" radius="0.25" height="2" rotation="0 0 -45"></a-cylinder>
+          <a-cylinder src="#spiderskin" position="2.3 0.3 0.25" radius="0.25" height="2.5" rotation="0 0 45"></a-cylinder>
+        </a-entity>
+        <a-entity position="0 0 -2.1">
+          <a-sphere src="#spiderskin" position="0 0 0"></a-sphere>
+          <a-cylinder src="#spiderskin" position="-1 0.5 0.25" radius="0.25" height="2" rotation="0 0 45"></a-cylinder>
+          <a-cylinder src="#spiderskin" position="-2.3 0.3 0.25" radius="0.25" height="2.5" rotation="0 0 -45"></a-cylinder>
+
+          <a-cylinder src="#spiderskin" position="1 0.5 0.25" radius="0.25" height="2" rotation="0 0 -45"></a-cylinder>
+          <a-cylinder src="#spiderskin" position="2.3 0.3 0.25" radius="0.25" height="2.5" rotation="0 0 45"></a-cylinder>
+        </a-entity>
+      </a-entity>
+
+      <!-- Spider -->
+      <a-entity rotation="80 -90 0" position="4 4.5 3" scale="0.4 0.4 0.4">
+        <a-sphere src="#spidereye" position="0.5 0.25 0.85" radius="0.175"></a-sphere>
+        <a-sphere src="#spidereye" position="0.2 0.25 0.85" radius="0.25"></a-sphere>
+        <a-sphere src="#spidereye" position="-0.2 0.25 0.85" radius="0.25"></a-sphere>
+        <a-sphere src="#spidereye" position="-0.5 0.25 0.85" radius="0.175"></a-sphere>
+        <a-entity position="0 0 0">
+          <a-sphere src="#spiderskin" position="0 0 0"></a-sphere>
+          <a-cylinder src="#spiderskin" position="-1 0.5 0.25" radius="0.25" height="2" rotation="0 0 45"></a-cylinder>
+          <a-cylinder src="#spiderskin" position="-2.3 0.3 0.25" radius="0.25" height="2.5" rotation="0 0 -45"></a-cylinder>
+
+          <a-cylinder src="#spiderskin" position="1 0.5 0.25" radius="0.25" height="2" rotation="0 0 -45"></a-cylinder>
+          <a-cylinder src="#spiderskin" position="2.3 0.3 0.25" radius="0.25" height="2.5" rotation="0 0 45"></a-cylinder>
+        </a-entity>
+        <a-entity position="0 0 -1.05">
+          <a-sphere src="#spiderskin" position="0 0 0"></a-sphere>
+          <a-cylinder src="#spiderskin" position="-1 0.5 0.25" radius="0.25" height="2" rotation="0 0 45"></a-cylinder>
+          <a-cylinder src="#spiderskin" position="-2.3 0.3 0.25" radius="0.25" height="2.5" rotation="0 0 -45"></a-cylinder>
+
+          <a-cylinder src="#spiderskin" position="1 0.5 0.25" radius="0.25" height="2" rotation="0 0 -45"></a-cylinder>
+          <a-cylinder src="#spiderskin" position="2.3 0.3 0.25" radius="0.25" height="2.5" rotation="0 0 45"></a-cylinder>
+        </a-entity>
+        <a-entity position="0 0 -2.1">
+          <a-sphere src="#spiderskin" position="0 0 0"></a-sphere>
+          <a-cylinder src="#spiderskin" position="-1 0.5 0.25" radius="0.25" height="2" rotation="0 0 45"></a-cylinder>
+          <a-cylinder src="#spiderskin" position="-2.3 0.3 0.25" radius="0.25" height="2.5" rotation="0 0 -45"></a-cylinder>
+
+          <a-cylinder src="#spiderskin" position="1 0.5 0.25" radius="0.25" height="2" rotation="0 0 -45"></a-cylinder>
+          <a-cylinder src="#spiderskin" position="2.3 0.3 0.25" radius="0.25" height="2.5" rotation="0 0 45"></a-cylinder>
+        </a-entity>
+      </a-entity>
+
+      <!-- Spider -->
+      <a-entity rotation="0 180 0" position="10 2 60" scale="2 2 2">
+        <a-sphere src="#spidereye" position="0.5 0.25 0.85" radius="0.175"></a-sphere>
+        <a-sphere src="#spidereye" position="0.2 0.25 0.85" radius="0.25"></a-sphere>
+        <a-sphere src="#spidereye" position="-0.2 0.25 0.85" radius="0.25"></a-sphere>
+        <a-sphere src="#spidereye" position="-0.5 0.25 0.85" radius="0.175"></a-sphere>
+        <a-entity position="0 0 0">
+          <a-sphere src="#spiderskin" position="0 0 0"></a-sphere>
+          <a-cylinder src="#spiderskin" position="-1 0.5 0.25" radius="0.25" height="2" rotation="0 0 45"></a-cylinder>
+          <a-cylinder src="#spiderskin" position="-2.3 0.3 0.25" radius="0.25" height="2.5" rotation="0 0 -45"></a-cylinder>
+
+          <a-cylinder src="#spiderskin" position="1 0.5 0.25" radius="0.25" height="2" rotation="0 0 -45"></a-cylinder>
+          <a-cylinder src="#spiderskin" position="2.3 0.3 0.25" radius="0.25" height="2.5" rotation="0 0 45"></a-cylinder>
+        </a-entity>
+        <a-entity position="0 0 -1.05">
+          <a-sphere src="#spiderskin" position="0 0 0"></a-sphere>
+          <a-cylinder src="#spiderskin" position="-1 0.5 0.25" radius="0.25" height="2" rotation="0 0 45"></a-cylinder>
+          <a-cylinder src="#spiderskin" position="-2.3 0.3 0.25" radius="0.25" height="2.5" rotation="0 0 -45"></a-cylinder>
+
+          <a-cylinder src="#spiderskin" position="1 0.5 0.25" radius="0.25" height="2" rotation="0 0 -45"></a-cylinder>
+          <a-cylinder src="#spiderskin" position="2.3 0.3 0.25" radius="0.25" height="2.5" rotation="0 0 45"></a-cylinder>
+        </a-entity>
+        <a-entity position="0 0 -2.1">
+          <a-sphere src="#spiderskin" position="0 0 0"></a-sphere>
+          <a-cylinder src="#spiderskin" position="-1 0.5 0.25" radius="0.25" height="2" rotation="0 0 45"></a-cylinder>
+          <a-cylinder src="#spiderskin" position="-2.3 0.3 0.25" radius="0.25" height="2.5" rotation="0 0 -45"></a-cylinder>
+
+          <a-cylinder src="#spiderskin" position="1 0.5 0.25" radius="0.25" height="2" rotation="0 0 -45"></a-cylinder>
+          <a-cylinder src="#spiderskin" position="2.3 0.3 0.25" radius="0.25" height="2.5" rotation="0 0 45"></a-cylinder>
+        </a-entity>
+      </a-entity>
+
+
+
+      <a-dodecahedron src="#rock" repeat="6 6" position="-5 0.25 -5" radius="2"></a-dodecahedron>
+      <a-dodecahedron src="#rock" repeat="6 6" position="5 0 10" radius="1"></a-dodecahedron>
+      <a-dodecahedron src="#rock" repeat="6 6" position="2 0.1 -15" radius="1"></a-dodecahedron>
+      <a-dodecahedron src="#rock" repeat="6 6" position="-3 0.25 20" radius="1"></a-dodecahedron>
+
+      
+      <a-icosahedron src="#rock" repeat="6 6" radius="10" position="-20 -1 5"></a-icosahedron>
+      <a-icosahedron src="#rock" repeat="6 6" radius="5" position="10 2 -35"></a-icosahedron>
+      <a-icosahedron src="#rock" repeat="6 6" radius="5" position="-20 -1 15"></a-icosahedron>
+      <a-icosahedron src="#rock" repeat="6 6" radius="15" position="15 -1 5"></a-icosahedron>
+
+      
+      <a-octahedron src="#rock" repeat="6 6" radius="30" position="-50 0 -35"></a-octahedron>
+      <a-octahedron src="#rock" repeat="6 6" radius="15" position="50 0 -25"></a-octahedron>
+      <a-octahedron src="#rock" repeat="6 6" radius="15" position="-40 0 40"></a-octahedron>
+      <a-octahedron src="#rock" repeat="6 6" radius="20" position="20 0 35"></a-octahedron>
+    
+      <a-tetrahedron src="#rock" repeat="6 6" radius="5" position="0 0 -10"></a-tetrahedron>
+      <a-tetrahedron src="#rock" repeat="6 6" radius="5" position="-10 0 -20"></a-tetrahedron>
+      <a-tetrahedron src="#rock" repeat="6 6" radius="5" position="20 0 10"></a-tetrahedron>
+      <a-tetrahedron src="#rock" repeat="6 6" radius="5" position="-10 0 35"></a-tetrahedron>
+
+    </a-scene>
+  </body>
+</html>Sp
