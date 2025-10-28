@@ -7,7 +7,7 @@ let dude;
 let sun;
 
 window.addEventListener("DOMContentLoaded",function() {
-    scene = document.querySelector("a-scene"); //CSS Selector
+    scene = document.querySelector("a-scene"); //CSS Selector.
     car = document.querySelector("#car");
     car.a = 0;
     car.da = -.03;
