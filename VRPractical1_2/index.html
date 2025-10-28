@@ -1,40 +1,235 @@
+<!DOCTYPE html>
 <html>
   <head>
-    <script src="https://aframe.io/releases/1.7.0/aframe.min.js"></script>
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
   </head>
   <body>
     <a-scene>
-      <a-entity class="plain_wall" position="0 0 0" rotation="0 0 0">
-        <a-entity class="plank" position="2 0 0">
-          <a-box position="0 0.5 0" width="1" height="1" depth="0.1" src=""></a-box>
-          <a-box position="0 1.5 0" width="1" height="1" depth="0.1" src=""></a-box>
-          <a-box position="0 2.5 0" width="1" height="1" depth="0.1" src=""></a-box>
-        </a-entity>
-        <a-entity class="plank" position="1 0 0">
-          <a-box position="0 0.5 0" width="1" height="1" depth="0.1" src=""></a-box>
-          <a-box position="0 1.5 0" width="1" height="1" depth="0.1" src=""></a-box>
-          <a-box position="0 2.5 0" width="1" height="1" depth="0.1" src=""></a-box>
-        </a-entity>
-        <a-entity class="plank" position="0 0 0">
-          <a-box position="0 0.5 0" width="1" height="1" depth="0.1" src=""></a-box>
-          <a-box position="0 1.5 0" width="1" height="1" depth="0.1" src=""></a-box>
-          <a-box position="0 2.5 0" width="1" height="1" depth="0.1" src=""></a-box>
-        </a-entity>
-        <a-entity class="plank" position="-1 0 0">
-          <a-box position="0 0.5 0" width="1" height="1" depth="0.1" src=""></a-box>
-          <a-box position="0 1.5 0" width="1" height="1" depth="0.1" src=""></a-box>
-          <a-box position="0 2.5 0" width="1" height="1" depth="0.1" src=""></a-box>
-        </a-entity>
-        <a-entity class="plank" position="-2 0 0">
-          <a-box position="0 0.5 0" width="1" height="1" depth="0.1" src=""></a-box>
-          <a-box position="0 1.5 0" width="1" height="1" depth="0.1" src=""></a-box>
-          <a-box position="0 2.5 0" width="1" height="1" depth="0.1" src=""></a-box>
-        </a-entity>
+
+
+      <!-- Camera -->
+      <a-entity position="0 1.6 0">
+        <a-camera></a-camera>
       </a-entity>
-      
-      <a-plane position="0 0 0" rotation="-90 0 0" width="100" height="100" color="#7BC8A4"></a-plane>
-      <a-sky color="#ECECEC"></a-sky>
-      <a-camera position="0 1.4 5"></a-camera>
+
+      <!-- Sky -->
+      <a-sky src="#sky" color="#87CEEB" repeat="1"></a-sky>
+
+      <!-- Snowy Ground -->
+      <a-plane position="0 0 -20" rotation="-90 0 0" width="50" height="100" src="#snowy grass" repeat="10 12"></a-plane>
+
+      <!-- Road -->
+      <a-box src="#snowy asphalt" position="0 0.01 -20" depth="100" height="0.01" width="4" repeat="1 10"></a-box>
+     
+      <!--Street lamps-->
+    <a-entity position="3 0 -2">
+       <a-cylinder position="0 1.5 0" radius="0.05" height="3" color="#666"></a-cylinder>
+      <a-box position="0 3.1 0" depth="0.2" height="0.2" width="0.4" color="#CFFF04"></a-box>
+    </a-entity>
+
+    <a-entity position="-3 0 -2">
+      <a-cylinder position="0 1.5 0" radius="0.05" height="3" color="#666"></a-cylinder>
+      <a-box position="0 3.1 0" depth="0.2" height="0.2" width="0.4" color="#CFFF04"></a-box>
+    </a-entity>
+
+    <a-entity position="-3 0 -17">
+      <a-cylinder position="0 1.5 0" radius="0.05" height="3" color="#666"></a-cylinder>
+      <a-box position="0 3.1 0" depth="0.2" height="0.2" width="0.4" color="#CFFF04"></a-box>
+    </a-entity>
+
+    <a-entity position="3 0 -17">
+      <a-cylinder position="0 1.5 0" radius="0.05" height="3" color="#666"></a-cylinder>
+      <a-box position="0 3.1 0" depth="0.2" height="0.2" width="0.4" color="#CFFF04"></a-box>
+    </a-entity>
+
+     <a-entity position="3 0 -35">
+        <a-cylinder position="0 1.5 0" radius="0.05" height="3" color="#666"></a-cylinder>
+        <a-box position="0 3.1 0" depth="0.2" height="0.2" width="0.4" color="#CFFF04"></a-box>
+      </a-entity>
+
+      <a-entity position="-3 0 -35">
+        <a-cylinder position="0 1.5 0" radius="0.05" height="3" color="#666"></a-cylinder>
+        <a-box position="0 3.1 0" depth="0.2" height="0.2" width="0.4" color="#CFFF04"></a-box>
+      </a-entity>
+      <!-- Houses -->
+
+      <!-- House 1 (Left side, facing right) -->
+      <a-entity position="-6 0 -10" rotation="0 90 0">
+        <a-box src="#brick" color ="brown" depth="6" height="3" width="6" position="0 1.5 0"></a-box>
+        <a-box src="#brick" color ="brown" depth="4" height="2.5" width="3" position="-4.5 1.25 0"></a-box>
+        <a-box src="#brick" color ="brown" depth="4" height="2.5" width="3" position="4.5 1.25 0"></a-box>
+        <a-box src="#brick" color ="brown" depth="4" height="2.5" width="4" position="0 4.25 0"></a-box>
+
+        <a-cylinder src="#snowy roof" radius="3.5" height="6" theta-start="0" theta-length="180" rotation="0 0 90" position="0 5 0"></a-cylinder>
+        <a-box src="#snowy roof" width="6" height="0.1" depth="7" position="0 5 0"></a-box>
+
+        <a-cylinder src="#snowy roof" radius="2" height="4" theta-start="0" theta-length="180" rotation="0 0 90" position="-4.5 2.5 0"></a-cylinder>
+        <a-box src="#snowy roof" width="4" height="0.1" depth="4" position="-4.5 2.5 0"></a-box>
+
+        <a-cylinder src="#snowy roof" radius="2" height="4" theta-start="0" theta-length="180" rotation="0 0 90" position="4.5 2.5 0"></a-cylinder>
+        <a-box src="#snowy roof" width="4" height="0.1" depth="4" position="4.5 2.5 0"></a-box>
+
+        <a-box color="#fff176" depth="0.1" height="1" width="1" position="-1.5 1.5 3.05"></a-box>
+        <a-box color="#fff176" depth="0.1" height="1" width="1" position="1.5 1.5 3.05"></a-box>
+        <a-box color="#fff59d" depth="0.1" height="1" width="1" position="0 4 2"></a-box>
+        <a-box color="#6d4c41" depth="0.1" height="1.5" width="1" position="0 0.75 3.05"></a-box>
+      </a-entity>
+
+      <!-- House 2 (Right side, facing left) -->
+      <a-entity position="6 0 -10" rotation="0 -90 0">
+        <a-box src="#brick"color ="brown"  depth="6" height="3" width="6" position="0 1.5 0"></a-box>
+        <a-box src="#brick"color ="brown"  depth="4" height="2.5" width="3" position="-4.5 1.25 0"></a-box>
+        <a-box src="#brick"color="#c62828" depth="4" height="2.5" width="3" position="4.5 1.25 0"></a-box>
+        <a-box src="#brick"color="#e53935" depth="4" height="2.5" width="4" position="0 4.25 0"></a-box>
+
+        <a-cylinder src="#snowy roof" radius="3.5" height="6" theta-start="0" theta-length="180" rotation="0 0 90" position="0 5 0"></a-cylinder>
+        <a-box src="#snowy roof" width="6" height="0.1" depth="7" position="0 5 0"></a-box>
+
+        <a-cylinder src="#snowy roof" radius="2" height="4" theta-start="0" theta-length="180" rotation="0 0 90" position="-4.5 2.5 0"></a-cylinder>
+        <a-box src="#snowy roof" width="4" height="0.1" depth="4" position="-4.5 2.5 0"></a-box>
+
+        <a-cylinder src="#snowy roof" radius="2" height="4" theta-start="0" theta-length="180" rotation="0 0 90" position="4.5 2.5 0"></a-cylinder>
+        <a-box src="#snowy roof" width="4" height="0.1" depth="4" position="4.5 2.5 0"></a-box>
+
+        <a-box color="#fff176" depth="0.1" height="1" width="1" position="-1.5 1.5 3.05"></a-box>
+        <a-box color="#fff176" depth="0.1" height="1" width="1" position="1.5 1.5 3.05"></a-box>
+        <a-box color="#fff59d" depth="0.1" height="1" width="1" position="0 4 2"></a-box>
+        <a-box color="#6d4c41" depth="0.1" height="1.5" width="1" position="0 0.75 3.05"></a-box>
+      </a-entity>
+
+      <!-- House 3 (Left side, facing right) -->
+      <a-entity position="-6 0 -30" rotation="0 90 0">
+        <a-box src="#brick"color="#d32f2f" depth="6" height="3" width="6" position="0 1.5 0"></a-box>
+        <a-box src="#brick"color="#c62828" depth="4" height="2.5" width="3" position="-4.5 1.25 0"></a-box>
+        <a-box src="#brick"color="#c62828" depth="4" height="2.5" width="3" position="4.5 1.25 0"></a-box>
+        <a-box src="#brick"color="#e53935" depth="4" height="2.5" width="4" position="0 4.25 0"></a-box>
+
+        <a-cylinder src="#snowy roof" radius="3.5" height="6" theta-start="0" theta-length="180" rotation="0 0 90" position="0 5 0"></a-cylinder>
+        <a-box src="#snowy roof" width="6" height="0.1" depth="7" position="0 5 0"></a-box>
+
+        <a-cylinder src="#snowy roof" radius="2" height="4" theta-start="0" theta-length="180" rotation="0 0 90" position="-4.5 2.5 0"></a-cylinder>
+        <a-box src="#snowy roof" width="4" height="0.1" depth="4" position="-4.5 2.5 0"></a-box>
+
+        <a-cylinder src="#snowy roof" radius="2" height="4" theta-start="0" theta-length="180" rotation="0 0 90" position="4.5 2.5 0"></a-cylinder>
+        <a-box src="#snowy roof" width="4" height="0.1" depth="4" position="4.5 2.5 0"></a-box>
+
+        <a-box color="#fff176" depth="0.1" height="1" width="1" position="-1.5 1.5 3.05"></a-box>
+        <a-box color="#fff176" depth="0.1" height="1" width="1" position="1.5 1.5 3.05"></a-box>
+        <a-box color="#fff59d" depth="0.1" height="1" width="1" position="0 4 2"></a-box>
+        <a-box color="#6d4c41" depth="0.1" height="1.5" width="1" position="0 0.75 3.05"></a-box>
+      </a-entity>
+
+      <!-- House 4 (Right side, facing left) -->
+      <a-entity position="6 0 -30" rotation="0 -90 0">
+        <a-box src="#brick"color="#d32f2f" depth="6" height="3" width="6" position="0 1.5 0"></a-box>
+        <a-box src="#brick"color="#c62828" depth="4" height="2.5" width="3" position="-4.5 1.25 0"></a-box>
+        <a-box src="#brick"color="#c62828" depth="4" height="2.5" width="3" position="4.5 1.25 0"></a-box>
+        <a-box src="#brick"color="#e53935" depth="4" height="2.5" width="4" position="0 4.25 0"></a-box>
+
+        <a-cylinder src="#snowy roof" radius="3.5" height="6" theta-start="0" theta-length="180" rotation="0 0 90" position="0 5 0"></a-cylinder>
+        <a-box src="#snowy roof" width="6" height="0.1" depth="7" position="0 5 0"></a-box>
+
+        <a-cylinder src="#snowy roof" radius="2" height="4" theta-start="0" theta-length="180" rotation="0 0 90" position="-4.5 2.5 0"></a-cylinder>
+        <a-box src="#snowy roof" width="4" height="0.1" depth="4" position="-4.5 2.5 0"></a-box>
+
+        <a-cylinder src="#snowy roof" radius="2" height="4" theta-start="0" theta-length="180" rotation="0 0 90" position="4.5 2.5 0"></a-cylinder>
+        <a-box src="#snowy roof" width="4" height="0.1" depth="4" position="4.5 2.5 0"></a-box>
+
+        <a-box color="#fff176" depth="0.1" height="1" width="1" position="-1.5 1.5 3.05"></a-box>
+        <a-box color="#fff176" depth="0.1" height="1" width="1" position="1.5 1.5 3.05"></a-box>
+        <a-box color="#fff59d" depth="0.1" height="1" width="1" position="0 4 2"></a-box>
+        <a-box color="#6d4c41" depth="0.1" height="1.5" width="1" position="0 0.75 3.05"></a-box>
+      </a-entity>
+
+      <!-- Cars in driveways -->
+
+      <a-entity position="-5 0 -2" rotation="0 90 0">
+  <a-box position="0 1 0" depth="3" height="2" width="1.5" color="#444" wireframe="true"></a-box>
+  <a-box position="0 0.5 0" depth="2.5" height="0.5" width="1.2" color="blue"></a-box>
+  <a-box position="0 0.9 0" depth="1.2" height="0.4" width="0.8" color="black" opacity="0.7"></a-box>
+  <a-plane position="0 1.05 0.6" rotation="-60 0 0" width="0.8" height="0.4" color="skyblue" opacity="0.5"></a-plane>
+  <a-plane position="-0.41 1 0" rotation="0 90 0" width="1" height="0.4" color="skyblue" opacity="0.5"></a-plane>
+  <a-plane position="0.41 1 0" rotation="0 -90 0" width="1" height="0.4" color="skyblue" opacity="0.5"></a-plane>
+  <a-sphere position="-0.4 0.5 1.3" radius="0.05" color="yellow"></a-sphere>
+  <a-sphere position="0.4 0.5 1.3" radius="0.05" color="yellow"></a-sphere>
+  <a-box position="-0.4 0.5 -1.3" depth="0.05" height="0.1" width="0.1" color="orange"></a-box>
+  <a-box position="0.4 0.5 -1.3" depth="0.05" height="0.1" width="0.1" color="orange"></a-box>
+  <a-cylinder position="-0.6 0.25 1" radius="0.2" height="0.2" rotation="90 90 0" color="black"></a-cylinder>
+  <a-cylinder position="0.6 0.25 1" radius="0.2" height="0.2" rotation="90 90 0" color="black"></a-cylinder>
+  <a-cylinder position="-0.6 0.25 -1" radius="0.2" height="0.2" rotation="90 90 0" color="black"></a-cylinder>
+  <a-cylinder position="0.6 0.25 -1" radius="0.2" height="0.2" rotation="90 90 0" color="black"></a-cylinder>
+  <a-box position="0 0.4 1.27" depth="0.1" height="0.1" width="1.2" color="gray"></a-box>
+  <a-box position="0 0.4 -1.27" depth="0.1" height="0.1" width="1.2" color="gray"></a-box>
+  <a-torus position="0.2 0.9 0.3" radius="0.07" radius-tubular="0.01" rotation="0 0 90" color="black"></a-torus>
+  <a-cylinder position="-0.3 0.3 -1.35" radius="0.03" height="0.2" rotation="90 0 0" color="gray"></a-cylinder>
+</a-entity>
+
+      <!-- Green car for House 2 (Right side) -->
+      <a-entity position="4.5 0 -2">
+        <a-box position="0 1 0" depth="3" height="2" width="1.5" color="#444" wireframe="true"></a-box>
+        <a-box position="0 0.5 0" depth="2.5" height="0.5" width="1.2" color="green"></a-box>
+        <a-box position="0 0.9 0" depth="1.2" height="0.4" width="0.8" color="black" opacity="0.7"></a-box>
+        <a-plane position="0 1.05 0.6" rotation="-60 0 0" width="0.8" height="0.4" color="skyblue" opacity="0.5"></a-plane>
+        <a-plane position="-0.41 1 0" rotation="0 90 0" width="1" height="0.4" color="skyblue" opacity="0.5"></a-plane>
+        <a-plane position="0.41 1 0" rotation="0 -90 0" width="1" height="0.4" color="skyblue" opacity="0.5"></a-plane>
+        <a-sphere position="-0.4 0.5 1.3" radius="0.05" color="yellow"></a-sphere>
+        <a-sphere position="0.4 0.5 1.3" radius="0.05" color="yellow"></a-sphere>
+        <a-box position="-0.4 0.5 -1.3" depth="0.05" height="0.1" width="0.1" color="orange"></a-box>
+        <a-box position="0.4 0.5 -1.3" depth="0.05" height="0.1" width="0.1" color="orange"></a-box>
+        <a-cylinder position="-0.6 0.25 1" radius="0.2" height="0.2" rotation="90 90 0" color="black"></a-cylinder>
+        <a-cylinder position="0.6 0.25 1" radius="0.2" height="0.2" rotation="90 90 0" color="black"></a-cylinder>
+        <a-cylinder position="-0.6 0.25 -1" radius="0.2" height="0.2" rotation="90 90 0" color="black"></a-cylinder>
+        <a-cylinder position="0.6 0.25 -1" radius="0.2" height="0.2" rotation="90 90 0" color="black"></a-cylinder>
+        <a-box position="0 0.4 1.27" depth="0.1" height="0.1" width="1.2" color="gray"></a-box>
+        <a-box position="0 0.4 -1.27" depth="0.1" height="0.1" width="1.2" color="gray"></a-box>
+        <a-torus position="0.2 0.9 0.3" radius="0.07" radius-tubular="0.01" rotation="0 0 90" color="black"></a-torus>
+        <a-cylinder position="-0.3 0.3 -1.35" radius="0.03" height="0.2" rotation="90 0 0" color="gray"></a-cylinder>
+      </a-entity>
+
+      <!-- Yellow car for House 3 (Left side) -->
+      <a-entity position="-4.5 0 -20" rotation="0 0 0">
+        <a-box position="0 1 0" depth="3" height="2" width="1.5" color="#444" wireframe="true"></a-box>
+        <a-box position="0 0.5 0" depth="2.5" height="0.5" width="1.2" color="yellow"></a-box>
+        <a-box position="0 0.9 0" depth="1.2" height="0.4" width="0.8" color="black" opacity="0.7"></a-box>
+        <a-plane position="0 1.05 0.6" rotation="-60 0 0" width="0.8" height="0.4" color="skyblue" opacity="0.5"></a-plane>
+        <a-plane position="-0.41 1 0" rotation="0 90 0" width="1" height="0.4" color="skyblue" opacity="0.5"></a-plane>
+        <a-plane position="0.41 1 0" rotation="0 -90 0" width="1" height="0.4" color="skyblue" opacity="0.5"></a-plane>
+        <a-sphere position="-0.4 0.5 1.3" radius="0.05" color="white"></a-sphere>
+        <a-sphere position="0.4 0.5 1.3" radius="0.05" color="white"></a-sphere>
+        <a-box position="-0.4 0.5 -1.3" depth="0.05" height="0.1" width="0.1" color="orange"></a-box>
+        <a-box position="0.4 0.5 -1.3" depth="0.05" height="0.1" width="0.1" color="orange"></a-box>
+        <a-cylinder position="-0.6 0.25 1" radius="0.2" height="0.2" rotation="90 90 0" color="black"></a-cylinder>
+        <a-cylinder position="0.6 0.25 1" radius="0.2" height="0.2" rotation="90 90 0" color="black"></a-cylinder>
+        <a-cylinder position="-0.6 0.25 -1" radius="0.2" height="0.2" rotation="90 90 0" color="black"></a-cylinder>
+        <a-cylinder position="0.6 0.25 -1" radius="0.2" height="0.2" rotation="90 90 0" color="black"></a-cylinder>
+        <a-box position="0 0.4 1.27" depth="0.1" height="0.1" width="1.2" color="gray"></a-box>
+        <a-box position="0 0.4 -1.27" depth="0.1" height="0.1" width="1.2" color="gray"></a-box>
+        <a-torus position="0.2 0.9 0.3" radius="0.07" radius-tubular="0.01" rotation="0 0 90" color="black"></a-torus>
+        <a-cylinder position="-0.3 0.3 -1.35" radius="0.03" height="0.2" rotation="90 0 0" color="gray"></a-cylinder>
+      </a-entity>
+
+      <!-- Purple car for House 4 (Right side) -->
+      <a-entity position="4.5 0 -23" rotation="0 90 0">
+        <a-box position="0 1 0" depth="3" height="2" width="1.5" color="#444" wireframe="true"></a-box>
+        <a-box position="0 0.5 0" depth="2.5" height="0.5" width="1.2" color="purple"></a-box>
+        <a-box position="0 0.9 0" depth="1.2" height="0.4" width="0.8" color="black" opacity="0.7"></a-box>
+        <a-plane position="0 1.05 0.6" rotation="-60 0 0" width="0.8" height="0.4" color="skyblue" opacity="0.5"></a-plane>
+        <a-plane position="-0.41 1 0" rotation="0 90 0" width="1" height="0.4" color="skyblue" opacity="0.5"></a-plane>
+        <a-plane position="0.41 1 0" rotation="0 -90 0" width="1" height="0.4" color="skyblue" opacity="0.5"></a-plane>
+        <a-sphere position="-0.4 0.5 1.3" radius="0.05" color="white"></a-sphere>
+        <a-sphere position="0.4 0.5 1.3" radius="0.05" color="white"></a-sphere>
+        <a-box position="-0.4 0.5 -1.3" depth="0.05" height="0.1" width="0.1" color="orange"></a-box>
+        <a-box position="0.4 0.5 -1.3" depth="0.05" height="0.1" width="0.1" color="orange"></a-box>
+        <a-cylinder position="-0.6 0.25 1" radius="0.2" height="0.2" rotation="90 90 0" color="black"></a-cylinder>
+        <a-cylinder position="0.6 0.25 1" radius="0.2" height="0.2" rotation="90 90 0" color="black"></a-cylinder>
+        <a-cylinder position="-0.6 0.25 -1" radius="0.2" height="0.2" rotation="90 90 0" color="black"></a-cylinder>
+        <a-cylinder position="0.6 0.25 -1" radius="0.2" height="0.2" rotation="90 90 0" color="black"></a-cylinder>
+        <a-box position="0 0.4 1.27" depth="0.1" height="0.1" width="1.2" color="gray"></a-box>
+        <a-box position="0 0.4 -1.27" depth="0.1" height="0.1" width="1.2" color="gray"></a-box>
+        <a-torus position="0.2 0.9 0.3" radius="0.07" radius-tubular="0.01" rotation="0 0 90" color="black"></a-torus>
+        <a-cylinder position="-0.3 0.3 -1.35" radius="0.03" height="0.2" rotation="90 0 0" color="gray"></a-cylinder>
+      </a-entity>
+
     </a-scene>
   </body>
 </html>

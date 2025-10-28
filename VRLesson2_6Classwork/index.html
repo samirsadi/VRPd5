@@ -1,0 +1,172 @@
+<!-- Model designed by Zhonghui Zhou (Past CTE student) --> 
+
+<html>
+  <head>
+    <script src="https://aframe.io/releases/1.7.0/aframe.min.js"></script>    
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <a-scene stats>
+      <a-assets>
+        <img id="panel1" src="panel1.jpeg">
+        <img id="panel3" src="panel3.jpg">
+        <img id="panel6" src="panel6.jpg">
+        <img id="panel9" src="panel9.jpg">
+        <img id="hexa" src="hexa.jpg">
+        <img id="earth" src="earth.jpg">
+        <img id="sun" src="sun.jpg">
+        <img id="moon" src="moon.jpg">
+        <img id="space" src="space.jpg">
+        <img id="ground" src="ground.jpg">
+        <img id="base" src="base.jpg">
+      </a-assets>
+      <a-camera wasd-controls="acceleration: 100; fly: true" position=" 0 1.5 0">
+      </a-camera>
+
+      <a-entity id="mech-1" scale="1 1 1" position="0 13 -10">
+        <a-entity id = "main-mech" position = "0 -12 10" color = "red" width = "5" height = "5" depth = "5">
+        <a-entity id="chest_unit" position="0 6.5 0">
+          <a-sphere src="#panel6" repeat="5 5" position="0 6 -10" radius="3.5" material="side:double"></a-sphere>
+          <a-cylinder position="0 7 -6.65" radius="0.5" height="1" rotation="0 90 90" src="#hexa"></a-cylinder>
+
+          <!--Screen-->
+        
+          <a-plane position="0 5.75 -8" width="4" height="3" material="src:#cam2;side:double" rotation = "0 180 0" canvas-updater></a-plane>
+
+          <a-cylinder position="0 6 -10" radius="3.65" height="3" rotation="0 0 90" src="#panel1" repeat="10 1"></a-cylinder>
+          <a-cylinder position="0 6 -10" radius="3.525" height="1.75" rotation="90 0 0" src="#panel9" repeat="6 1"></a-cylinder>
+          <a-box position="0 7 -6.75" rotation="0 0 0" depth="1" height="1.5" width="2.5" src="#panel1"></a-box>
+
+          <a-box position="-2.7 4.5 -8" rotation="0 30 -65" depth="2" height="0.25" width="3" src="#panel9" ></a-box>
+          <a-box position="2.7 4.5 -8" rotation="0 -30 65" depth="2" height="0.25" width="3" src="#panel9" ></a-box>
+          <a-box position="-2.7 4.5 -12" rotation="0 -30 -65" depth="2" height="0.25" width="3" src="#panel9" ></a-box>
+          <a-box position="2.7 4.5 -12" rotation="0 30 65" depth="2" height="0.25" width="3" src="#panel9" ></a-box>
+
+          <a-box position="-2.7 7.125 -8" rotation="0 30 65" depth="2" height="0.25" width="3" src="#panel9" repeat="3 2"></a-box>
+          <a-box position="2.7 7.125 -8" rotation="0 -30 -65" depth="2" height="0.25" width="3" src="#panel9" ></a-box>
+          <a-box position="-2.7 7.125 -12" rotation="0 -30 65" depth="2" height="0.25" width="3" src="#panel9" ></a-box>
+          <a-box position="2.7 7.125 -12" rotation="0 30 -65" depth="2" height="0.25" width="3" src="#panel9" ></a-box>
+
+          <a-box position="-2.7 7.5 -8" rotation="0 30 65" depth="1.25" height="0.75" width="1" src="#panel3"></a-box>
+          <a-box position="2.7 7.5 -8" rotation="0 -30 -65" depth="1.25" height="0.75" width="1" src="#panel3"></a-box>
+
+          <a-cylinder position="0 3.5 -10" radius="3" height="1" rotation="0 0 0" src="#panel3" repeat="15 1"></a-cylinder>
+          <a-cylinder position="0 8.25 -10" radius="3" height="0.5" rotation="0 0 0" src="#panel3" repeat="15 1"></a-cylinder>
+
+          <a-cylinder position="3 6 -10" radius="1.5" height="1.25" rotation="0 0 90" src="#panel6"></a-cylinder>
+          <a-cylinder position="-3 6 -10" radius="1.5" height="1.25" rotation="0 0 90" src="#panel6"></a-cylinder>
+        </a-entity>
+
+        <a-entity id="hatch" position="0 6.25 0">
+          <a-cylinder position="0 8.5 -10" radius="1" height="3" rotation="0 0 0" src="#panel3"></a-cylinder>
+        </a-entity>
+
+        <a-entity id="waist_unit" position="0 6.5 0">
+          <a-cylinder position="0 2.75 -10" radius="2" height="1" rotation="0 0 0" src="#panel6" repeat="10 1"></a-cylinder>
+          <a-box position="0 2 -10" rotation="0 0 0" depth="5" height="3" width="1" src="#panel3" repeat="3 1"></a-box>
+          <a-box position="1 2.15 -10" rotation="0 0 -80" depth="5" height="1.5" width="0.25" src="#panel3"></a-box>
+          <a-box position="2.35 1.975 -10" rotation="0 0 65" depth="5" height="1.5" width="0.25" src="#panel3"></a-box>
+          
+          <a-box position="-1 2.15 -10" rotation="0 0 80" depth="5" height="1.5" width="0.25" src="#panel3"></a-box>
+          <a-box position="-2.35 1.975 -10" rotation="0 0 -65" depth="5" height="1.5" width="0.25" src="#panel3"></a-box>
+
+          <a-box position="0 1.125 -7.35" rotation="-5 0 0" depth="0.25" height="2.25" width="1.5" src="#panel1"></a-box>
+          <a-box position="0 1.125 -12.65" rotation="5 0 0" depth="0.25" height="2.25" width="1.5" src="#panel1"></a-box>
+          <a-cylinder position="0 0.75 -10" radius="0.5" height="3.5" rotation="0 0 90" src="panel6.jpg"></a-cylinder>
+
+        </a-entity>
+
+        <a-entity id="right_leg1" position="0 6.5 0">
+          <a-cylinder position="-1.65 0.75 -10.15" radius="1" height="2" rotation="0 0 90" src="#panel6"></a-cylinder>
+          <a-box position="-1.65 -1 -9.5" rotation="-20 0 0" depth="1.95" height="4" width="1.75" src="#panel3"></a-box>
+        </a-entity>
+        <a-entity id="right_leg2" position="0 6.5 0">
+          <a-box position="-1.65 -2.5 -10" rotation="65 0 0" depth="1.25" height="3" width="1.25" src="#panel6"></a-box>
+        </a-entity>
+        <a-entity id="right_leg3" position="0 6.5 0">
+          <a-box position="-1.65 -4 -11" rotation="-15 0 0" depth="2" height="4" width="1.75" src="#panel9"></a-box>
+          <a-cylinder position="-1.65 -5.75 -10.5" src="#panel6" radius="0.75" rotation="0 0 90" height="1.25"></a-cylinder>
+        </a-entity>
+        <a-entity id="right_leg4" position="0 6.5 0">
+          <a-box position="-1.65 -6.7 -11" rotation="90 0 0" depth="1" height="2.5" width="1.75" src="#panel3"></a-box>
+          <a-box position="-2.25 -6.775 -9.25" rotation="90 -10 0" depth="0.85" height="1.5" width="0.75" src="#panel3"></a-box>
+          <a-box position="-1.05 -6.775 -9.25" rotation="90 10 0" depth="0.85" height="1.5" width="0.75" src="#panel3"></a-box>
+        </a-entity>
+          
+
+        <a-entity id="left_leg1" position="0 6.5 0">
+          <a-cylinder position="1.65 0.75 -10.15" radius="1" height="2" rotation="0 0 90" src="#panel6"></a-cylinder>
+          <a-box position="1.65 -1 -9.5" rotation="-20 0 0" depth="1.95" height="4" width="1.75" src="#panel3"></a-box>
+        </a-entity>
+        <a-entity id="left_leg2" position="0 6.5 0">
+          <a-box position="1.65 -2.5 -10" rotation="65 0 0" depth="1.25" height="3" width="1.25" src="#panel6"></a-box>
+        </a-entity>
+        <a-entity id="left_leg3" position="0 6.5 0">
+          <a-box position="1.65 -4 -11" rotation="-15 0 0" depth="2" height="4" width="1.75" src="#panel9"></a-box>
+          <a-cylinder position="1.65 -5.75 -10.5" src="#panel6" radius="0.75" rotation="0 0 90" height="1.25"></a-cylinder>
+        </a-entity>
+        <a-entity id="left_leg4" position="0 6.5 0">
+          <a-box position="1.65 -6.7 -11" rotation="90 0 0" depth="1" height="2.5" width="1.75" src="#panel3"></a-box>
+          <a-box position="2.25 -6.775 -9.25" rotation="90 10 0" depth="0.85" height="1.5" width="0.75" src="#panel3"></a-box>
+          <a-box position="1.05 -6.775 -9.25" rotation="90 -10 0" depth="0.85" height="1.5" width="0.75" src="#panel3"></a-box>
+        </a-entity>
+
+
+        
+
+        <a-entity id="right_arm1" position="0 6.5 0">
+          <a-cylinder position="-4 6 -10" src="#panel6" radius="0.75" rotation="0 0 90" height="1.25"></a-cylinder>
+          <a-sphere position="-4.75 6 -10" src="#panel9" radius="1.125"></a-sphere>
+          <a-cylinder position="-4.75 5 -10" src="#panel6" radius="0.75" rotation="0 0 0" height="1.25"></a-cylinder>
+          <a-box position="-4.75 3.75 -10" rotation="0 0 0" depth="1.5" height="2.25" width="1.5" src="#panel3"></a-box>
+          <a-cylinder position="-4.75 2.15 -10" src="#panel6" radius="0.65" rotation="0 0 90" height="1.25"></a-cylinder>
+        </a-entity>
+        <a-entity id="right_arm2" position="0 6.5 0">
+          <a-box position="-4.75 1 -10" rotation="0 0 0" depth="1.5" height="2.25" width="1.5" src="#panel9"></a-box>
+          <a-box position="-5 0 -10" rotation="0 0 0" depth="1.485" height="2.25" width="0.5" src="#panel9"></a-box>
+          <a-box position="-4.75 -1.5 -9.425" rotation="0 0 20" depth="0.325" height="1" width="0.25" src="#panel3"></a-box>
+          <a-box position="-4.75 -1.5 -9.8" rotation="0 0 20" depth="0.325" height="1" width="0.25" src="#panel3"></a-box>
+          <a-box position="-4.75 -1.5 -10.175" rotation="0 0 20" depth="0.325" height="1" width="0.25" src="#panel3"></a-box>
+          <a-box position="-4.75 -1.5 -10.55" rotation="0 0 20" depth="0.325" height="1" width="0.25" src="#panel3"></a-box>
+          <a-box position="-4.25 -0.5 -9.425" rotation="0 0 0" depth="0.325" height="1" width="0.25" src="#panel3"></a-box>
+        </a-entity>
+
+        <a-entity id="left_arm1" position="0 6.5 0">
+          <a-cylinder position="4 6 -10" src="#panel6" radius="0.75" rotation="0 0 90" height="1.25"></a-cylinder>
+          <a-sphere position="4.75 6 -10" src="#panel9" radius="1.125"></a-sphere>
+          <a-cylinder position="4.75 5 -10" src="#panel6" radius="0.75" rotation="0 0 0" height="1.25"></a-cylinder>
+          <a-box position="4.75 3.75 -10" rotation="0 0 0" depth="1.5" height="2.25" width="1.5" src="#panel3"></a-box>
+          <a-cylinder position="4.75 2.15 -10" src="#panel6" radius="0.65" rotation="0 0 90" height="1.25"></a-cylinder>
+        </a-entity>
+        <a-entity id="left_arm2" position="0 6.5 0">
+          <a-box position="4.75 1 -10" rotation="0 0 0" depth="1.5" height="2.25" width="1.5" src="#panel9"></a-box>
+          <a-box position="5 0 -10" rotation="0 0 0" depth="1.485" height="2.25" width="0.5" src="#panel9"></a-box>
+          <a-box position="4.75 -1.5 -9.425" rotation="0 0 -20" depth="0.325" height="1" width="0.25" src="#panel3"></a-box>
+          <a-box position="4.75 -1.5 -9.8" rotation="0 0 -20" depth="0.325" height="1" width="0.25" src="#panel3"></a-box>
+          <a-box position="4.75 -1.5 -10.175" rotation="0 0 -20" depth="0.325" height="1" width="0.25" src="#panel3"></a-box>
+          <a-box position="4.75 -1.5 -10.55" rotation="0 0 -20" depth="0.325" height="1" width="0.25" src="#panel3"></a-box>
+          <a-box position="4.25 -0.5 -9.425" rotation="0 0 0" depth="0.325" height="1" width="0.25" src="#panel3"></a-box>
+        </a-entity>
+
+        <a-entity id="backpack" position="0 6.5 0">
+
+          <a-cylinder position="1.75 6 -13.75" src="#panel3" radius="1" rotation="0 0 0" height="4"></a-cylinder>
+          <a-sphere position="1.75 7 -13.75" src="#panel3" radius="1" scale="1 2 1"></a-sphere>
+          <a-cylinder position="-1.75 6 -13.75" src="#panel3" radius="1" rotation="0 0 0" height="4"></a-cylinder>
+          <a-sphere position="-1.75 7 -13.75" src="#panel3" radius="1" scale="1 2 1"></a-sphere>
+          <a-box position="0 6 -13.75" rotation="0 0 0" depth="1" height="3" width="2" src="#panel9"></a-box>
+          <a-cone position="1.75 3.5 -13.75" radius-bottom="0.875" radius-top="0.5" open-ended="true" material="side:double" src="#panel3"></a-cone>
+          <a-cone position="-1.75 3.5 -13.75" radius-bottom="0.875" radius-top="0.5" open-ended="true" material="side:double" src="#panel3"></a-cone>
+
+          </a-entity>
+        
+        
+        </a-entity>
+      </a-entity>  
+      
+      <a-plane src="#ground" width="100" height="100" repeat="20 20" rotation="-90 0 0"></a-plane>
+      <a-sky src="#space" repeat="10 10"></a-sky>
+    </a-scene>
+
+  </body>
+</html>

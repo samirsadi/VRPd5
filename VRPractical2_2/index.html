@@ -1,0 +1,120 @@
+<html>
+  <head>
+    <script src="https://aframe.io/releases/1.7.0/aframe.min.js"></script>
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <a-scene>
+      <a-sphere id="sun" position="0 5 -15" color="yellow"></a-sphere>
+
+      <a-entity id="pokemonball" position="0 1 -4">
+        <a-sphere phi-start="0" radius="0.5" phi-length="180" rotation="-90 0 0" side="double" color="red"></a-sphere>
+        <a-sphere phi-start="0" radius="0.5" phi-length="180" rotation="90 0 0" side="double"></a-sphere>
+        <a-cylinder color="black" height="0.99" radius="0.175" rotation="90 0 0"></a-cylinder>
+        <a-cylinder radius="0.1" rotation="90 0 0"></a-cylinder> 
+      </a-entity>
+
+      <a-entity id="rocket" position="3 1 -4">
+      <a-cone radius-top="0" radius-bottom="0.5" height="1" color="red" position="0 0 -2"></a-cone>
+      <a-cylinder radius="0.5" height="2" color="gray" position="0 -1.5 -2"></a-cylinder>
+      <a-cone radius-top="0" radius-bottom="0.25" height="2" color="orange" position="0 -3.5 -2" rotation="-180 0 0"></a-cone>
+    </a-entity>
+
+      <!-- Car -->
+      <a-entity id = "car" rotation="0 90 0" position="0 0 -8">
+        <a-box id = "frunk" position="0 0.7 -4" width = "2.5" depth = "1.5" color="cyan"></a-box>
+        <a-box id = "trunk" position="0 0.7 -7" width = "2.5" depth = "1.5" color="cyan"></a-box>
+        <a-box id = "roof" position="0 2 -5.5" width = "2.5" depth = "1.5" height = "0.05" color="cyan"></a-box>
+        <a-box id = "l_door" position="1.22 0.7 -5.5" width = "1" depth = "1.5" height = "0.05" color="cyan" rotation = "0 0 90"></a-box>
+        <a-box id = "r_door" position="-1.23 0.7 -5.5" width = "1" depth = "1.5" height = "0.05" color="cyan" rotation = "0 0 90"></a-box>
+        <a-entity id = "left_wheels">
+          <a-cylinder position="1.05 0.4 -4" rotation = "0 0 90" radius = "0.4" height = "0.5" color = "black"></a-cylinder>
+          <a-cylinder position="1.06 0.4 -4" rotation = "0 0 90" radius = "0.2" height = "0.5" color = "white"></a-cylinder>
+        </a-entity>
+        <a-entity id = "left_wheels" position = "0 0 -3">
+          <a-cylinder position="1.05 0.4 -4" rotation = "0 0 90" radius = "0.4" height = "0.5" color = "black"></a-cylinder>
+          <a-cylinder position="1.06 0.4 -4" rotation = "0 0 90" radius = "0.2" height = "0.5" color = "white"></a-cylinder>
+        </a-entity>
+        <a-entity id = "right_wheels" position = "-2.1 0 -3">
+          <a-cylinder position="1.05 0.4 -4" rotation = "0 0 90" radius = "0.4" height = "0.5" color = "black"></a-cylinder>
+          <a-cylinder position="1.04 0.4 -4" rotation = "0 0 90" radius = "0.2" height = "0.5" color = "white"></a-cylinder>
+        </a-entity>
+        <a-entity id = "right_wheels" position = "-2.1 0 0">
+          <a-cylinder position="1.05 0.4 -4" rotation = "0 0 90" radius = "0.4" height = "0.5" color = "black"></a-cylinder>
+          <a-cylinder position="1.04 0.4 -4" rotation = "0 0 90" radius = "0.2" height = "0.5" color = "white"></a-cylinder>
+        </a-entity>
+        <a-sphere id = "r_front_light" position="0.7 0.9 -3.2" color = "yellow" radius = "0.15"></a-sphere>
+        <a-sphere id = "l_front_light" position="-0.7 0.9 -3.2" color = "yellow" radius = "0.15"></a-sphere>
+        <a-entity id = "windows">
+          <a-plane position = "1.29 1.6 -5.5" rotation="0 90 0" width = "1.5" height = "0.75" color = "#C6E2E3"></a-plane>
+          <a-plane position = "-1.29 1.6 -5.5" rotation="0 270 0" width = "1.5" height = "0.75" color = "#C6E2E3"></a-plane>
+          <a-plane position = "0 1.6 -4.74" rotation="0 0 0" width = "2.5" height = "0.8" color = "#C6E2E3"></a-plane>
+          <a-plane position = "0 1.6 -6.26" rotation="180 0 0" width = "2.5" height = "0.8" color = "#C6E2E3"></a-plane>
+        </a-entity>
+        <a-entity id = "window_frame">
+          <a-box position="1.26 1.6 -4.8" rotation="0 0 0" width="0.01" height="0.8" depth = "0.15" color = "cyan"></a-box>
+          <a-box position="-1.26 1.6 -4.8" rotation="0 0 0" width="0.01" height="0.8" depth = "0.15" color = "cyan"></a-box>
+          <a-box position="1.25 1.6 -6.18" rotation="0 0 0" width="0.01" height="0.8" depth = "0.15" color = "cyan"></a-box>
+          <a-box position="-1.25 1.6 -6.18" rotation="0 0 0" width="0.01" height="0.8" depth = "0.15" color = "cyan"></a-box>
+        </a-entity>
+        <a-entity id = "r_back_light">
+          <a-box position="-1 0.9 -7.75" rotation="-90 0 0" width="0.25" height="0.01" depth = "0.3" color = "red"></a-box>
+          <a-box position="-1 0.68 -7.76" rotation="-90 0 0" width="0.25" height="0.01" depth = "0.15" color = "yellow"></a-box>
+          <a-box position="-1 0.75 -7.76" rotation="-90 0 0" width="0.25" height="0.01" depth = "0.05" color = "white"></a-box>
+        </a-entity>
+        <a-entity id = "l_back_light" position = "2 0 0">
+          <a-box position="-1 0.9 -7.75" rotation="-90 0 0" width="0.25" height="0.01" depth = "0.3" color = "red"></a-box>
+          <a-box position="-1 0.68 -7.76" rotation="-90 0 0" width="0.25" height="0.01" depth = "0.15" color = "yellow"></a-box>
+          <a-box position="-1 0.75 -7.76" rotation="-90 0 0" width="0.25" height="0.01" depth = "0.05" color = "white"></a-box>
+        </a-entity>
+        <a-box id = "left_handle" position="-1.23 1 -6" width="0.1" height="0.1" depth = "0.2" color = "black"></a-box>
+        <a-box id = "right_handle" position="1.23 1 -6" width="0.1" height="0.1" depth = "0.2" color = "black"></a-box>
+        <a-entity id = "f_licence_frame">
+          <a-box position="0 0.4 -3.25" width="0.5" height="0.3" depth = "0.01" color = "white"></a-box>
+          <a-box position="0 0.4 -3.24" width="0.4" height="0.2" depth = "0.01" color = "black"></a-box>
+        </a-entity>
+        <a-entity id = "b_licence_frame" position = "0 0 -4.5">
+          <a-box position="0 0.4 -3.25" width="0.5" height="0.3" depth = "0.01" color = "white"></a-box>
+          <a-box position="0 0.4 -3.26" width="0.4" height="0.2" depth = "0.01" color = "black"></a-box>
+        </a-entity>
+        <a-entity id = "steering_wheel">
+          <a-cylinder position="0.7 1 -4.8" rotation = "0 90 135" radius = "0.05" height = "0.3" color = "black"></a-cylinder>
+          <a-cylinder position="0.7 1.1 -4.9" rotation = "0 90 135" radius = "0.15" height = "0.01" color = "black"></a-cylinder>
+          <a-cylinder position="0.7 1.11 -4.9" rotation = "0 90 135" radius = "0.1" height = "0.01" color = "white"></a-cylinder>
+        </a-entity>
+        <a-entity id = "r_chair">
+          <a-box position="0.75 1.2 -6.2" width="0.7" height="1.3" depth = "0.05" color = "black"></a-box>
+          <a-box position="0.75 0.6 -5.8" rotation = "90 0 0" width="0.7" height="0.8" depth = "0.05" color = "black"></a-box>
+        </a-entity>
+        <a-entity id = "l_chair" position = "-1.5 0 0">
+          <a-box position="0.75 1.2 -6.2" width="0.7" height="1.3" depth = "0.05" color = "black"></a-box>
+          <a-box position="0.75 0.6 -5.8" rotation = "90 0 0" width="0.7" height="0.8" depth = "0.05" color = "black"></a-box>
+        </a-entity>
+      </a-entity>
+
+      <a-entity id="dude" position="-2 0.85 -10" rotation="0 -45 0">
+        <a-sphere position="0 0 0" radius=".5" color="#FF007F"></a-sphere>
+        <a-cylinder position="0 0.35 0" radius=".2" height="0.5" color="gray"></a-cylinder>
+        <a-cylinder position="0 0.6 0" radius=".1" height="0.5"></a-cylinder>
+        
+        <a-cylinder position="-0.3 -0.6 0.07" rotation="90 0 0" radius=".1" height=".26" color="Goldenrod"></a-cylinder>
+        <a-cylinder position="-0.3 -0.5 0" radius=".05" height=".3" color="Goldenrod"></a-cylinder>
+        <a-sphere position="-0.3 -0.6 0.22" radius=".105" color="Goldenrod"></a-sphere>
+        <a-cylinder position="0.3 -0.6 0.07" rotation="90 0 0" radius=".1" height=".26" color="Goldenrod"></a-cylinder>
+        <a-cylinder position="0.3 -0.5 0" radius=".05" height=".3" color="Goldenrod"></a-cylinder>
+        <a-sphere position="0.3 -0.6 0.22" radius=".105" color="Goldenrod"></a-sphere>
+        
+        <a-cylinder position="-.18 0 0.45" radius=".10" height=".25" color="white"></a-cylinder>
+        <a-cylinder position=".18 0 0.45" radius=".10" height=".25" color="white"></a-cylinder>
+      </a-entity>
+
+
+      
+      <a-plane position="0 0 -4" rotation="-90 0 0" repeat="10 10"width="40" height="40" src="grass.jpg"></a-plane>
+      <a-sky src="sky.jpg" repeat="5 5"></a-sky>
+      <a-camera position="0 1.6 0">
+        <a-cursor></a-cursor>
+      </a-camera>
+    </a-scene>
+  </body>
+</html>
